@@ -1,7 +1,7 @@
 %define	name	gtk-sharp2
 %define oname gtk-sharp
 %define version 2.10.1
-%define release %mkrel 2
+%define release %mkrel 3
 %define mono 1.0.2
 %define monodir %_prefix/lib/mono
 
@@ -24,6 +24,15 @@ BuildRequires:	monodoc
 
 %description
 Gtk-sharp is a C# language binding for the  gtk+ toolkit.
+
+
+%package devel
+Summary: C# code generation tools for %name
+Group: Development/Other
+
+%description devel
+This contains the code generation tools of gtk-sharp. It is needed for building
+C# wrappers for GObject APIs.
 
 %package -n glib-sharp2
 Summary:        C# binding for glib
@@ -100,13 +109,9 @@ fi
 
 %files -n glib-sharp2
 %defattr(-,root,root)
-%_bindir/*
 %monodir/gac/*glib-sharp
 %monodir/%oname-2.0/*glib-sharp.dll*
-%_prefix/lib/%oname-2.0/
 %_libdir/libglibsharpglue-2.so
-%_datadir/gapi-2.0/
-%_libdir/pkgconfig/gapi-2.0.pc
 %_libdir/pkgconfig/glib-sharp-2.0.pc
 
 %files -n glade-sharp2
@@ -123,4 +128,10 @@ fi
 %doc sample
 %_prefix/lib/monodoc/sources/gtk*
 
+%files devel
+%defattr(-,root,root)
+%_bindir/*
+%_datadir/gapi-2.0/
+%_libdir/pkgconfig/gapi-2.0.pc
+%_prefix/lib/%oname-2.0/
 
