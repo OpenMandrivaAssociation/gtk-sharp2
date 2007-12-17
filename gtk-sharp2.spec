@@ -13,7 +13,6 @@ License:	LGPL
 Group:		System/Libraries
 URL:		http://gtk-sharp.sourceforge.net/
 Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/gtk-sharp/%oname-%version.tar.bz2
-BuildRoot:	%_tmppath/%name-buildroot
 Requires: glib-sharp2 = %version
 BuildRequires:	mono-devel >= %mono
 BuildRequires:	libglade2.0-devel
