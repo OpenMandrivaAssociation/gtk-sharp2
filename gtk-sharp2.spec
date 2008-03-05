@@ -1,6 +1,6 @@
 %define	name	gtk-sharp2
 %define oname gtk-sharp
-%define version 2.11.91
+%define version 2.12.0
 %define release %mkrel 1
 %define mono 1.0.2
 %define monodir %_prefix/lib/mono
@@ -98,11 +98,12 @@ fi
 %monodir/%oname-2.0/*gtk-sharp.dll*
 %monodir/%oname-2.0/*gtk-dotnet.dll*
 %monodir/%oname-2.0/*pango-sharp.dll*
+%_libdir/libatksharpglue-2.so
 %_libdir/libgdksharpglue-2.so
-%_libdir/pkgconfig/gtk-sharp-2.0.pc
-%_libdir/pkgconfig/gtk-dotnet-2.0.pc
 %_libdir/libgtksharpglue-2.so
 %_libdir/libpangosharpglue-2.so
+%_libdir/pkgconfig/gtk-sharp-2.0.pc
+%_libdir/pkgconfig/gtk-dotnet-2.0.pc
 
 %files -n glib-sharp2
 %defattr(-,root,root)
