@@ -1,7 +1,7 @@
 %define	name	gtk-sharp2
 %define oname gtk-sharp
-%define version 2.12.1
-%define release %mkrel 2
+%define version 2.12.2
+%define release %mkrel 1
 %define mono 1.0.2
 %define monodir %_prefix/lib/mono
 
