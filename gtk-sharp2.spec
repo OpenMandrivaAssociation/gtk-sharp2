@@ -9,7 +9,7 @@ Summary:	C# language binding for the gtk+ toolkit
 Name:		%name
 Version:	%version
 Release:	%release
-License:	LGPL
+License:	LGPLv2
 Group:		System/Libraries
 URL:		http://gtk-sharp.sourceforge.net/
 Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/gtk-sharp/%oname-%version.tar.bz2
