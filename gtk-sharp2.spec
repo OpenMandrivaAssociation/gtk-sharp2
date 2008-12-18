@@ -6,7 +6,7 @@
 
 Summary:	C# language binding for the gtk+ toolkit
 Name:		%name
-Version:	2.12.6
+Version:	2.12.7
 Release:	%release
 License:	LGPLv2
 Group:		System/Libraries
