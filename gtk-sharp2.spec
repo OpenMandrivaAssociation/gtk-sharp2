@@ -1,6 +1,6 @@
 %define	name	gtk-sharp2
 %define oname gtk-sharp
-%define release %mkrel 1
+%define release %mkrel 2
 %define mono 1.0.2
 %define monodir %_prefix/lib/mono
 
@@ -53,7 +53,6 @@ Summary:	Documentation for gtk-sharp
 Group:		Development/Other
 Requires(post): mono-tools >= 1.1.9
 Requires(postun): mono-tools >= 1.1.9
-Conflicts: monodoc < 1.1.9
 
 %description doc
 Gtk-sharp is a C# language binding for the  gtk+ toolkit.
