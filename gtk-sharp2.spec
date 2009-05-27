@@ -1,12 +1,12 @@
 %define	name	gtk-sharp2
 %define oname gtk-sharp
-%define release %mkrel 2
+%define release %mkrel 1
 %define mono 1.0.2
 %define monodir %_prefix/lib/mono
 
 Summary:	C# language binding for the gtk+ toolkit
 Name:		%name
-Version:	2.12.8
+Version:	2.12.9
 Release:	%release
 License:	LGPLv2
 Group:		System/Libraries
