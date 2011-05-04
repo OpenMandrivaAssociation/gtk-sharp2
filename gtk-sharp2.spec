@@ -1,6 +1,6 @@
 %define	name	gtk-sharp2
 %define oname gtk-sharp
-%define release %mkrel 2
+%define release %mkrel 3
 %define mono 1.0.2
 %define monodir %_prefix/lib/mono
 
@@ -22,6 +22,41 @@ BuildRequires:	monodoc
 %description
 Gtk-sharp is a C# language binding for the  gtk+ toolkit.
 
+%package 2.4
+Summary: C# language binding for the gtk+-2.4 toolkit
+Group: System/Libraries
+Requires: gtk-sharp2 = %version
+Conflicts: gtk-sharp2 < 2.12.10-3
+
+%description 2.4
+Gtk-sharp is a C# language binding for the gtk+ toolkit.
+
+%package 2.6
+Summary: C# language binding for the gtk+-2.6 toolkit
+Group: System/Libraries
+Requires: gtk-sharp2 = %version
+Conflicts: gtk-sharp2 < 2.12.10-3
+
+%description 2.6
+Gtk-sharp is a C# language binding for the gtk+ toolkit.
+
+%package 2.8
+Summary: C# language binding for the gtk+-2.8 toolkit
+Group: System/Libraries
+Requires: gtk-sharp2 = %version
+Conflicts: gtk-sharp2 < 2.12.10-3
+
+%description 2.8
+Gtk-sharp is a C# language binding for the gtk+ toolkit.
+
+%package 2.10
+Summary: C# language binding for the gtk+-2.10 toolkit
+Group: System/Libraries
+Requires: gtk-sharp2 = %version
+Conflicts: gtk-sharp2 < 2.12.10-3
+
+%description 2.10
+Gtk-sharp is a C# language binding for the gtk+ toolkit.
 
 %package devel
 Summary: C# code generation tools for %name
@@ -39,6 +74,42 @@ Requires:       mono >= %mono
 %description -n glib-sharp2
 Glib-sharp is a C# language binding for glib.
 
+%package -n glib-sharp2-2.4
+Summary: C# binding for glib-2.4
+Group: System/Libraries
+Requires: glib-sharp2 = %version
+Conflicts: glib-sharp2 < 2.12.10-3
+
+%description -n glib-sharp2-2.4
+Glib-sharp is a C# language binding for glib.
+
+%package -n glib-sharp2-2.6
+Summary: C# binding for glib-2.6
+Group: System/Libraries
+Requires: glib-sharp2 = %version
+Conflicts: glib-sharp2 < 2.12.10-3
+
+%description -n glib-sharp2-2.6
+Glib-sharp is a C# language binding for glib.
+
+%package -n glib-sharp2-2.8
+Summary: C# binding for glib-2.8
+Group: System/Libraries
+Requires: glib-sharp2 = %version
+Conflicts: glib-sharp2 < 2.12.10-3
+
+%description -n glib-sharp2-2.8
+Glib-sharp is a C# language binding for glib.
+
+%package -n glib-sharp2-2.10
+Summary: C# binding for glib-2.10
+Group: System/Libraries
+Requires: glib-sharp2 = %version
+Conflicts: glib-sharp2 < 2.12.10-3
+
+%description -n glib-sharp2-2.10
+Glib-sharp is a C# language binding for glib.
+
 %package -n glade-sharp2
 Summary:        C# binding for glade
 Group:          System/Libraries
@@ -47,6 +118,41 @@ Requires: %name = %version
 %description -n glade-sharp2
 Glade-sharp is a C# language binding for glade.
 
+%package -n glade-sharp2-2.4
+Summary: C# binding for glib-2.6
+Group: System/Libraries
+Requires: glade-sharp2 = %version
+Conflicts: glade-sharp2 < 2.12.10-3
+
+%description -n glade-sharp2-2.4
+Glade-sharp is a C# language binding for glade.
+
+%package -n glade-sharp2-2.6
+Summary: C# binding for glib-2.6
+Group: System/Libraries
+Requires: glade-sharp2 = %version
+Conflicts: glade-sharp2 < 2.12.10-3
+
+%description -n glade-sharp2-2.6
+Glade-sharp is a C# language binding for glade.
+
+%package -n glade-sharp2-2.8
+Summary: C# binding for glib-2.8
+Group: System/Libraries
+Requires: glade-sharp2 = %version
+Conflicts: glade-sharp2 < 2.12.10-3
+
+%description -n glade-sharp2-2.8
+Glade-sharp is a C# language binding for glade.
+
+%package -n glade-sharp2-2.10
+Summary: C# binding for glib-2.10
+Group: System/Libraries
+Requires: glade-sharp2 = %version
+Conflicts: glade-sharp2 < 2.12.10-3
+
+%description -n glade-sharp2-2.10
+Glade-sharp is a C# language binding for glade.
 
 %package doc
 Summary:	Documentation for gtk-sharp
@@ -59,9 +165,7 @@ Gtk-sharp is a C# language binding for the  gtk+ toolkit.
 This package provides documentation for gtk-sharp. 
 
 %prep
-rm -rf %buildroot
-
-%setup -q -n %oname-%version
+%setup -qn %oname-%version
 
 %build
 %configure2_5x
@@ -69,7 +173,7 @@ make
 
 %install
 rm -rf %buildroot
-%makeinstall
+%makeinstall_std
 
 rm -rf %buildroot%_libdir/lib*a
 
@@ -86,36 +190,128 @@ fi
 
 %files
 %defattr(-,root,root)
-%monodir/gac/*atk-sharp
-%monodir/gac/*gdk-sharp
-%monodir/gac/*gtk-dotnet
-%monodir/gac/*gtk-sharp
-%monodir/gac/*pango-sharp
-%monodir/%oname-2.0/*atk-sharp.dll*
-%monodir/%oname-2.0/*gdk-sharp.dll*
-%monodir/%oname-2.0/*gtk-sharp.dll*
-%monodir/%oname-2.0/*gtk-dotnet.dll*
-%monodir/%oname-2.0/*pango-sharp.dll*
-%_libdir/libatksharpglue-2.so
-%_libdir/libgdksharpglue-2.so
-%_libdir/libgtksharpglue-2.so
-%_libdir/libpangosharpglue-2.so
-%_libdir/pkgconfig/gtk-sharp-2.0.pc
-%_libdir/pkgconfig/gtk-dotnet-2.0.pc
+%{_libdir}/libatksharpglue-2.so
+%{_libdir}/libgdksharpglue-2.so
+%{_libdir}/libgtksharpglue-2.so
+%{_libdir}/libpangosharpglue-2.so
+%{_libdir}/pkgconfig/gtk-dotnet-2.0.pc
+%{_libdir}/pkgconfig/gtk-sharp-2.0.pc
+%monodir/gtk-sharp-2.0/atk-sharp.dll
+%monodir/gtk-sharp-2.0/gdk-sharp.dll
+%monodir/gtk-sharp-2.0/gtk-dotnet.dll
+%monodir/gtk-sharp-2.0/gtk-sharp.dll
+%monodir/gtk-sharp-2.0/pango-sharp.dll
+%monodir/gac/atk-sharp/2.12.0.0*
+%monodir/gac/gdk-sharp/2.12.0.0*
+%monodir/gac/gtk-dotnet/2.12.0.0*
+%monodir/gac/gtk-sharp/2.12.0.0*
+%monodir/gac/pango-sharp/2.12.0.0*
+
+%files 2.4
+%defattr(-,root,root)
+%monodir/gtk-sharp-2.0/policy.2.4.atk-sharp.dll
+%monodir/gtk-sharp-2.0/policy.2.4.gdk-sharp.dll
+%monodir/gtk-sharp-2.0/policy.2.4.gtk-dotnet.dll
+%monodir/gtk-sharp-2.0/policy.2.4.gtk-sharp.dll
+%monodir/gtk-sharp-2.0/policy.2.4.pango-sharp.dll
+%monodir/gac/policy.2.4.atk-sharp/0.0.0.0*
+%monodir/gac/policy.2.4.gdk-sharp/0.0.0.0*
+%monodir/gac/policy.2.4.gtk-dotnet/0.0.0.0*
+%monodir/gac/policy.2.4.gtk-sharp/0.0.0.0*
+%monodir/gac/policy.2.4.pango-sharp/0.0.0.0*
+
+%files 2.6
+%defattr(-,root,root)
+%monodir/gtk-sharp-2.0/policy.2.6.atk-sharp.dll
+%monodir/gtk-sharp-2.0/policy.2.6.gdk-sharp.dll
+%monodir/gtk-sharp-2.0/policy.2.6.gtk-dotnet.dll
+%monodir/gtk-sharp-2.0/policy.2.6.gtk-sharp.dll
+%monodir/gtk-sharp-2.0/policy.2.6.pango-sharp.dll
+%monodir/gac/policy.2.6.atk-sharp/0.0.0.0*
+%monodir/gac/policy.2.6.gdk-sharp/0.0.0.0*
+%monodir/gac/policy.2.6.gtk-dotnet/0.0.0.0*
+%monodir/gac/policy.2.6.gtk-sharp/0.0.0.0*
+%monodir/gac/policy.2.6.pango-sharp/0.0.0.0*
+
+%files 2.8
+%defattr(-,root,root)
+%monodir/gtk-sharp-2.0/policy.2.8.atk-sharp.dll
+%monodir/gtk-sharp-2.0/policy.2.8.gdk-sharp.dll
+%monodir/gtk-sharp-2.0/policy.2.8.gtk-dotnet.dll
+%monodir/gtk-sharp-2.0/policy.2.8.gtk-sharp.dll
+%monodir/gtk-sharp-2.0/policy.2.8.pango-sharp.dll
+%monodir/gac/policy.2.8.atk-sharp/0.0.0.0*
+%monodir/gac/policy.2.8.gdk-sharp/0.0.0.0*
+%monodir/gac/policy.2.8.gtk-dotnet/0.0.0.0*
+%monodir/gac/policy.2.8.gtk-sharp/0.0.0.0*
+%monodir/gac/policy.2.8.pango-sharp/0.0.0.0*
+
+%files 2.10
+%defattr(-,root,root)
+%monodir/gtk-sharp-2.0/policy.2.10.atk-sharp.dll
+%monodir/gtk-sharp-2.0/policy.2.10.gdk-sharp.dll
+%monodir/gtk-sharp-2.0/policy.2.10.gtk-dotnet.dll
+%monodir/gtk-sharp-2.0/policy.2.10.gtk-sharp.dll
+%monodir/gtk-sharp-2.0/policy.2.10.pango-sharp.dll
+%monodir/gac/policy.2.10.atk-sharp/0.0.0.0*
+%monodir/gac/policy.2.10.gdk-sharp/0.0.0.0*
+%monodir/gac/policy.2.10.gtk-dotnet/0.0.0.0*
+%monodir/gac/policy.2.10.gtk-sharp/0.0.0.0*
+%monodir/gac/policy.2.10.pango-sharp/0.0.0.0*
 
 %files -n glib-sharp2
 %defattr(-,root,root)
-%monodir/gac/*glib-sharp
-%monodir/%oname-2.0/*glib-sharp.dll*
-%_libdir/libglibsharpglue-2.so
-%_libdir/pkgconfig/glib-sharp-2.0.pc
+%{_libdir}/libglibsharpglue-2.so
+%{_libdir}/pkgconfig/glib-sharp-2.0.pc
+%monodir/gtk-sharp-2.0/glib-sharp.dll
+%monodir/gac/glib-sharp/2.12.0.0*
+
+%files -n glib-sharp2-2.4
+%defattr(-,root,root)
+%monodir/gtk-sharp-2.0/policy.2.4.glib-sharp.dll
+%monodir/gac/policy.2.4.glib-sharp/0.0.0.0*
+
+%files -n glib-sharp2-2.6
+%defattr(-,root,root)
+%monodir/gtk-sharp-2.0/policy.2.6.glib-sharp.dll
+%monodir/gac/policy.2.6.glib-sharp/0.0.0.0*
+
+%files -n glib-sharp2-2.8
+%defattr(-,root,root)
+%monodir/gtk-sharp-2.0/policy.2.8.glib-sharp.dll
+%monodir/gac/policy.2.8.glib-sharp/0.0.0.0*
+
+%files -n glib-sharp2-2.10
+%defattr(-,root,root)
+%monodir/gtk-sharp-2.0/policy.2.10.glib-sharp.dll
+%monodir/gac/policy.2.10.glib-sharp/0.0.0.0*
 
 %files -n glade-sharp2
 %defattr(-,root,root)
-%monodir/gac/*glade-sharp
-%monodir/%oname-2.0/*glade-sharp.dll*
-%_libdir/pkgconfig/glade-sharp-2.0.pc
+%{_libdir}/pkgconfig/glade-sharp-2.0.pc
 %_libdir/libgladesharpglue-2.so
+%monodir/gtk-sharp-2.0/glade-sharp.dll
+%monodir/gac/glade-sharp/2.12.0.0*
+
+%files -n glade-sharp2-2.4
+%defattr(-,root,root)
+%monodir/gtk-sharp-2.0/policy.2.4.glade-sharp.dll
+%monodir/gac/policy.2.4.glade-sharp/0.0.0.0*
+
+%files -n glade-sharp2-2.6
+%defattr(-,root,root)
+%monodir/gtk-sharp-2.0/policy.2.6.glade-sharp.dll
+%monodir/gac/policy.2.6.glade-sharp/0.0.0.0*
+
+%files -n glade-sharp2-2.8
+%defattr(-,root,root)
+%monodir/gtk-sharp-2.0/policy.2.8.glade-sharp.dll
+%monodir/gac/policy.2.8.glade-sharp/0.0.0.0*
+
+%files -n glade-sharp2-2.10
+%defattr(-,root,root)
+%monodir/gtk-sharp-2.0/policy.2.10.glade-sharp.dll
+%monodir/gac/policy.2.10.glade-sharp/0.0.0.0*
 
 %files doc
 %defattr(-,root,root)
