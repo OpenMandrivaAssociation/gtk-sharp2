@@ -1,6 +1,6 @@
 %define	name	gtk-sharp2
 %define oname gtk-sharp
-%define release %mkrel 1
+%define release %mkrel 2
 %define mono 1.0.2
 %define monodir %_prefix/lib/mono
 
@@ -12,6 +12,7 @@ License:	LGPLv2
 Group:		System/Libraries
 URL:		http://gtk-sharp.sourceforge.net/
 Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/gtk-sharp/%oname-%version.tar.bz2
+Patch0:		gtk-sharp-2.12.11-fix-glib-includes.patch
 BuildRoot:	%_tmppath/%name-buildroot
 Requires: glib-sharp2 = %version
 BuildRequires:	mono-devel >= %mono
@@ -166,6 +167,7 @@ This package provides documentation for gtk-sharp.
 
 %prep
 %setup -qn %oname-%version
+%apply_patches
 
 %build
 %configure2_5x
