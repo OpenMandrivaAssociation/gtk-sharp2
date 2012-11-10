@@ -1,0 +1,11 @@
+--- gtk-sharp-2.12.11/glib/glue/thread.c.glib-headers	2011-12-14 09:59:11.947049851 +0100
++++ gtk-sharp-2.12.11/glib/glue/thread.c	2011-12-14 09:59:19.928045077 +0100
+@@ -20,7 +20,7 @@
+  */
+ 
+ 
+-#include <glib/gthread.h>
++#include <glib.h>
+ 
+ gboolean glibsharp_g_thread_supported (void);
+ 
