@@ -1,16 +1,15 @@
-%define url_ver %(echo %{version}|cut -d. -f1,2)
 %define oname	gtk-sharp
 %define monodir	%{_prefix}/lib/mono
 
 Summary:	C sharp language binding for the gtk+ toolkit
 Name:		gtk-sharp2
-Version:	2.12.11
-Release:	10
+Version:	2.12.26
+Release:	1
 License:	LGPLv2
 Group:		System/Libraries
 Url:		http://gtk-sharp.sourceforge.net/
-Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/gtk-sharp/%{url_ver}/%{oname}-%{version}.tar.bz2
-Patch0:		gtk-sharp-2.12.11-fix-glib-includes.patch
+Source0:	http://origin-download.mono-project.com/sources/gtk-sharp212/%{oname}-%{version}.tar.gz
+Source100:	%{name}.rpmlintrc
 
 BuildRequires:	monodoc
 BuildRequires:	pkgconfig(libglade-2.0)
@@ -168,7 +167,7 @@ This package provides documentation for gtk-sharp.
 %apply_patches
 
 %build
-%configure2_5x --disable-static
+%configure
 make
 
 %install
