@@ -3,8 +3,8 @@
 
 Summary:	C sharp language binding for the gtk+ toolkit
 Name:		gtk-sharp2
-Version:	2.12.26
-Release:	5
+Version:	2.12.45
+Release:	1
 License:	LGPLv2
 Group:		System/Libraries
 Url:		http://gtk-sharp.sourceforge.net/
@@ -168,10 +168,10 @@ This package provides documentation for gtk-sharp.
 
 %build
 %configure
-make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 rm -f sample/valtest/.libs/libvalobj.so
 rm -f sample/opaquetest/.libs/libopaque.so
