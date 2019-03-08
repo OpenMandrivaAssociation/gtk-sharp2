@@ -1,4 +1,2 @@
-removed_sources:
-  gtk-sharp-2.12.11.tar.bz2: 1ef391896e57f2445b7a1ca1b640d74d533e2158
 sources:
-  gtk-sharp-2.12.26.tar.gz: 2f5007362f374a5a967dc6b16cdaaf3921dad1fa
+  gtk-sharp-2.12.45.tar.gz: c9c50193d96a0efa5f45eb9d3f1ebb3d57fd565c
