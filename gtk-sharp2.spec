@@ -164,7 +164,7 @@ This package provides documentation for gtk-sharp.
 
 %prep
 %setup -qn %{oname}-%{version}
-%apply_patches
+%autopatch -p1
 
 %build
 %configure
