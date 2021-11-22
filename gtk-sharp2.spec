@@ -10,11 +10,17 @@ Group:		System/Libraries
 Url:		http://gtk-sharp.sourceforge.net/
 Source0:	http://origin-download.mono-project.com/sources/gtk-sharp212/%{oname}-%{version}.tar.gz
 Source100:	%{name}.rpmlintrc
+Patch0:		gtk-sharp2-2.12.12-glib-include.patch
+Patch1:		gtk-sharp2-2.12.12-gtkrange.patch
 
 BuildRequires:	monodoc
+BuildRequires:	pkgconfig(atk)
+BuildRequires:	pkgconfig(gobject-2.0)
+BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	pkgconfig(libglade-2.0)
 BuildRequires:	pkgconfig(libxslt)
 BuildRequires:	pkgconfig(mono)
+BuildRequires:	pkgconfig(pango)
 Requires:	glib-sharp2 = %{version}
 
 %description
