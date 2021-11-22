@@ -29,7 +29,7 @@ Gtk-sharp is a C sharp language binding for the  gtk+ toolkit.
 %package 2.4
 Summary:	C sharp language binding for the gtk+-2.4 toolkit
 Group:		System/Libraries
-Requires:	gtk-sharp2 = %{version}
+Requires:	%{name} = %{version}-%{release}
 Conflicts:	gtk-sharp2 < 2.12.10-3
 
 %description 2.4
@@ -38,7 +38,7 @@ Gtk-sharp is a C sharp language binding for the gtk+ toolkit.
 %package 2.6
 Summary:	C sharp language binding for the gtk+-2.6 toolkit
 Group:		System/Libraries
-Requires:	gtk-sharp2 = %{version}
+Requires:	%{name} = %{version}-%{release}
 Conflicts:	gtk-sharp2 < 2.12.10-3
 
 %description 2.6
@@ -47,7 +47,7 @@ Gtk-sharp is a C sharp language binding for the gtk+ toolkit.
 %package 2.8
 Summary:	C sharp language binding for the gtk+-2.8 toolkit
 Group:		System/Libraries
-Requires:	gtk-sharp2 = %{version}
+Requires:	%{name} = %{version}-%{release}
 Conflicts:	gtk-sharp2 < 2.12.10-3
 
 %description 2.8
@@ -56,7 +56,7 @@ Gtk-sharp is a C sharp language binding for the gtk+ toolkit.
 %package 2.10
 Summary:	C sharp language binding for the gtk+-2.10 toolkit
 Group:		System/Libraries
-Requires:	gtk-sharp2 = %{version}
+Requires:	%{name} = %{version}-%{release}
 Conflicts:	gtk-sharp2 < 2.12.10-3
 
 %description 2.10
@@ -81,7 +81,7 @@ Glib-sharp is a C sharp language binding for glib.
 %package -n glib-sharp2-2.4
 Summary:	C sharp binding for glib-2.4
 Group:		System/Libraries
-Requires:	glib-sharp2 = %{version}
+Requires:	glib-sharp2 = %{version}-%{release}
 Conflicts:	glib-sharp2 < 2.12.10-3
 
 %description -n glib-sharp2-2.4
@@ -90,7 +90,7 @@ Glib-sharp is a C sharp language binding for glib.
 %package -n glib-sharp2-2.6
 Summary:	C sharp binding for glib-2.6
 Group:		System/Libraries
-Requires:	glib-sharp2 = %{version}
+Requires:	glib-sharp2 = %{version}-%{release}
 Conflicts:	glib-sharp2 < 2.12.10-3
 
 %description -n glib-sharp2-2.6
@@ -99,7 +99,7 @@ Glib-sharp is a C sharp language binding for glib.
 %package -n glib-sharp2-2.8
 Summary:	C sharp binding for glib-2.8
 Group:		System/Libraries
-Requires:	glib-sharp2 = %{version}
+Requires:	glib-sharp2 = %{version}-%{release}
 Conflicts:	glib-sharp2 < 2.12.10-3
 
 %description -n glib-sharp2-2.8
@@ -108,7 +108,7 @@ Glib-sharp is a C sharp language binding for glib.
 %package -n glib-sharp2-2.10
 Summary:	C sharp binding for glib-2.10
 Group:		System/Libraries
-Requires:	glib-sharp2 = %{version}
+Requires:	glib-sharp2 = %{version}-%{release}
 Conflicts:	glib-sharp2 < 2.12.10-3
 
 %description -n glib-sharp2-2.10
@@ -117,7 +117,7 @@ Glib-sharp is a C sharp language binding for glib.
 %package -n glade-sharp2
 Summary:	C sharp binding for glade
 Group:		System/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description -n glade-sharp2
 Glade-sharp is a C sharp language binding for glade.
@@ -125,7 +125,7 @@ Glade-sharp is a C sharp language binding for glade.
 %package -n glade-sharp2-2.4
 Summary:	C sharp binding for glib-2.6
 Group:		System/Libraries
-Requires:	glade-sharp2 = %{version}
+Requires:	glade-sharp2 = %{version}-%{release}
 Conflicts:	glade-sharp2 < 2.12.10-3
 
 %description -n glade-sharp2-2.4
@@ -134,7 +134,7 @@ Glade-sharp is a C sharp language binding for glade.
 %package -n glade-sharp2-2.6
 Summary:	C sharp binding for glib-2.6
 Group:		System/Libraries
-Requires:	glade-sharp2 = %{version}
+Requires:	glade-sharp2 = %{version}-%{release}
 Conflicts:	glade-sharp2 < 2.12.10-3
 
 %description -n glade-sharp2-2.6
@@ -143,7 +143,7 @@ Glade-sharp is a C sharp language binding for glade.
 %package -n glade-sharp2-2.8
 Summary:	C sharp binding for glib-2.8
 Group:		System/Libraries
-Requires:	glade-sharp2 = %{version}
+Requires:	glade-sharp2 = %{version}-%{release}
 Conflicts:	glade-sharp2 < 2.12.10-3
 
 %description -n glade-sharp2-2.8
@@ -152,7 +152,7 @@ Glade-sharp is a C sharp language binding for glade.
 %package -n glade-sharp2-2.10
 Summary:	C sharp binding for glib-2.10
 Group:		System/Libraries
-Requires:	glade-sharp2 = %{version}
+Requires:	glade-sharp2 = %{version}-%{release}
 Conflicts:	glade-sharp2 < 2.12.10-3
 
 %description -n glade-sharp2-2.10
