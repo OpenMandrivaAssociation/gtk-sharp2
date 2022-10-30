@@ -4,11 +4,11 @@
 Summary:	C sharp language binding for the gtk+ toolkit
 Name:		gtk-sharp2
 Version:	2.12.45
-Release:	4
+Release:	5
 License:	LGPLv2
 Group:		System/Libraries
 Url:		http://gtk-sharp.sourceforge.net/
-Source0:	http://origin-download.mono-project.com/sources/gtk-sharp212/%{oname}-%{version}.tar.gz
+Source0:	http://download.mono-project.com/sources/gtk-sharp212/%{oname}-%{version}.tar.gz
 Source100:	%{name}.rpmlintrc
 Patch0:		gtk-sharp2-2.12.12-glib-include.patch
 Patch1:		gtk-sharp2-2.12.12-gtkrange.patch
@@ -169,11 +169,13 @@ Gtk-sharp is a C sharp language binding for the  gtk+ toolkit.
 This package provides documentation for gtk-sharp. 
 
 %prep
-%setup -qn %{oname}-%{version}
-%autopatch -p1
+%autosetup -p1 -n %{oname}-%{version}
+%global optflags %{optflags} -Wno-int-conversion
+sed -i -e 's,-Wcast-align ,,' configure.in configure
+sed -i -e 's,-Wint-conversion ,,' configure.in configure
+%configure
 
 %build
-%configure
 %make_build
 
 %install
