@@ -4,7 +4,7 @@
 Summary:	C sharp language binding for the gtk+ toolkit
 Name:		gtk-sharp2
 Version:	2.12.45
-Release:	5
+Release:	6
 License:	LGPLv2
 Group:		System/Libraries
 Url:		http://gtk-sharp.sourceforge.net/
