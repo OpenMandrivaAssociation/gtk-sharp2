@@ -7,7 +7,7 @@ Version:	2.12.45
 Release:	6
 License:	LGPLv2
 Group:		System/Libraries
-Url:		http://gtk-sharp.sourceforge.net/
+Url:		https://gtk-sharp.sourceforge.net/
 Source0:	http://download.mono-project.com/sources/gtk-sharp212/%{oname}-%{version}.tar.gz
 Source100:	%{name}.rpmlintrc
 Patch0:		gtk-sharp2-2.12.12-glib-include.patch
