@@ -13,6 +13,11 @@ Source100:	%{name}.rpmlintrc
 Patch0:		gtk-sharp2-2.12.12-glib-include.patch
 Patch1:		gtk-sharp2-2.12.12-gtkrange.patch
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	monodoc
 BuildRequires:	pkgconfig(atk)
 BuildRequires:	pkgconfig(gobject-2.0)
